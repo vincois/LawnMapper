@@ -14,7 +14,7 @@ mod_string = re.sub(pattern,'', cord )
 
 #making a full coordinate string with no leading space
 fullCord = re.sub(r'^\s+', '', mod_string)
-print(fullCord)
+#print(fullCord)
 
 #seperating x,y,z into their respective float strings
 X, Y, Z = (mod_string.split())
@@ -23,6 +23,8 @@ float(X)
 float(Y)
 float(Z)
 
+#After some googling this is what I have atm. This throughs an error that the values do not contain the same amout of numbers. 
+#That is an issue using the coordinates from SC. 
 fig = plt.figure()
 fig.set_size_inches(6, 6)
 ax = fig.add_subplot(111, projection='3d')
