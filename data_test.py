@@ -4,6 +4,7 @@
 import re
 
 #Example of what comes from /showlocation into the clipboard
+#Still need to write the code to collect the coordinates from the clipboard and what until a new set of coordinates is available in the clipboard. 
 cord = "Coordinates: x:-19023554105.376129 y:-2613925949.476050 z:-1802.328174"
 #pyperclip.copy(s)
 
@@ -13,7 +14,7 @@ mod_string = re.sub(pattern,'', cord )
 
 #making a full coordinate string with no leading space
 fullCord = re.sub(r'^\s+', '', mod_string)
-print(fullCord)
+#print(fullCord)
 
 #seperating x,y,z into their respective float strings
 cordX,cordY,cordZ = (mod_string.split())
@@ -22,7 +23,7 @@ float(cordX)
 float(cordY)
 float(cordZ)
 
-
+#The old regex code I had created on a website to create regex. Just left here as a ref. 
 """
 print(cord)
 
